@@ -51,19 +51,21 @@ o a Snowflake staging table.
 ```bash
 bash
 Sao chép mã
-dbt-snowflake-dagster/
+dbt-snowflake-ELT/
 │
 ├── dbt_project/
 │   ├── models/          # dbt models
 │   ├── seeds/           # Sample seed data
 │   ├── dbt_project.yml  # dbt configuration
-│
-├── dagster_project/
-│   ├── assets.py        # Dagster assets
-│   ├── schedules.py     # Dagster schedules
-│   ├── definitions.py   # Dagster pipeline definitions
-│
-└── README.md            # Project Documentation
+│   ├── tcph_dagster/
+│       ├── tcph_project/
+│           ├── assets.py        # Dagster assets
+│           ├── schedules.py     # Dagster schedules
+│           ├── definitions.py   # Dagster pipeline definitions
+│           ├── project.py       # define path to the dbt project
+|           └── ...
+|
+└──...
 
 ```
 
@@ -71,18 +73,14 @@ dbt-snowflake-dagster/
 
 ## **Learning Outcomes**
 
-Through this project, I gained a deeper understanding of:
-
-1. How to integrate and orchestrate **dbt** workflows within **Dagster**.
-2. Configuring and optimizing **Snowflake** as a scalable data warehouse.
-3. The benefits of modular pipeline design for ease of debugging and scalability.
-4. How to handle dependencies between tasks in a real-world ELT pipeline.
+- How to integrate and orchestrate **dbt** workflows within **Dagster**. And understand some concept about how **dagster** work with dbt like the usage of manifest file.
+- Configuring **Snowflake** as a scalable data warehouse. Learn how to transform data in separate steps in **dbt**, such as staging, fact tables, or view tables, and understand the advantages of transforming data this way.
+- Self-learning new tools and effectively dealing with problems or bugs.
 
 ---
 
 ## **Future Improvements**
 
-- Adding tests for dbt models and integrating test results into Dagster workflows.
-- Implementing CI/CD pipelines for deploying dbt models.
+- Adding more useful tests for dbt models and integrating test results into Dagster workflows.
+- Implementing CI/CD pipelines for deploying dbt models and understand the concept.
 - Expanding the project to include additional tools like Apache Airflow or Prefect for comparison.
-- Using sensor-based triggers to handle real-time or event-driven data workflows.
