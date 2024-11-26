@@ -1,0 +1,13 @@
+snowflakeDbt_ELT:
+  outputs:
+    dev:
+      account: qvbpcbf-wa65336
+      database: DBT_DB
+      password: Saotrinity3021
+      role: accountadmin
+      schema: dbt_schema
+      threads: 5
+      type: snowflake
+      user: datpham1203
+      warehouse: dbt_wh
+  target: dev
