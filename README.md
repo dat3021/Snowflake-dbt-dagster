@@ -8,7 +8,6 @@ In detail, the raw data will be transform through several  and then stored back 
 
 It can be viewed as a ELT project except the extraction part, as it use sample data that is already available in Snowflake. 
 
-This project was undertaken as part of my learning journey to build data pipleline.
 
 ![Biểu đồ không có tiêu đề drawio](https://github.com/user-attachments/assets/1a639d24-7432-45c3-b608-84cb470aea18)
 
